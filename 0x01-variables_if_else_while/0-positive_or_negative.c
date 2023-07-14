@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/**
+ * main - Entry point
+ * 
+ * Description: 'the programs describe the number negative ,positve or zero
+ * @parameter: describe the parameter
+ * 
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
