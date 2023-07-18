@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	char c[] = "mainfunt";
+	char c[] ="mainfunct";
 	int k;
 
 	for (k = 0; k < 9; k++)
