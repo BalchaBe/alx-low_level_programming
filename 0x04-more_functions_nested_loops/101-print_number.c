@@ -2,21 +2,32 @@
 #include <stdio.h>
 
 /**
- * main - check the code for.
+ * print_number - Write a function that prints an integer with putchar
+ * @n: This is my number to print
  *
- * Return: Always 0.
  */
-int main(void)
+void print_number(int n)
 {
-    char s1[98] = "Hello ";
-    char s2[] = "World!\n";
-    char *ptr;
+	unsigned int num2, num1 = n;
+	int div = 1;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
-    ptr = _strcat(s1, s2);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", ptr);
-    return (0);
+	if (n < 0)
+	{
+		_putchar('-');
+		num1 = n * -1;
+	}
+	num2 = num1;
+	while (num2 > 9)
+	{
+		div *= 10;
+		num2 = num2 / 10;
+	}
+	while (div >= 1)
+	{
+		num2 = num1 % div;
+		num1 /= div;
+		_putchar(num1 + '0');
+		num1 = num2;
+		div /= 10;
+	}
 }
