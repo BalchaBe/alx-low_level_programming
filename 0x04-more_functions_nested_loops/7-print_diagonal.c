@@ -2,9 +2,9 @@
 
 /**
   * Draws a diagonal lines according parameter
-  * 
   * Return: 0
   */
+
 void print_diagonal(int n)
 {
 	int x, y;
