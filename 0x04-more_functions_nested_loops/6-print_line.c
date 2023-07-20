@@ -3,7 +3,7 @@
 /**
   * Draws a straight line according to parameter
   * 
-  * Return: empty
+  * Return: 0
   */
 void print_line(int n)
 {
@@ -17,7 +17,7 @@ void print_line(int n)
 	{
 		for (b = 0; b < n; b++)
 		{
-			_putchar(101);
+			_putchar(95);
 		}
 
 		_putchar('\n');
