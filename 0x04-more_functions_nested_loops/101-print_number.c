@@ -2,37 +2,21 @@
 #include <stdio.h>
 
 /**
- * print_number - prints a number
- * Input number
+ * main - check the code for.
+ *
+ * Return: Always 0.
  */
-
-void print_number(int n)
+int main(void)
 {
-	long x, y, i, temp, expo;
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
 
-	y = n;
-	expo = x =  1;
-	if (y < 0)
-	{
-		y *= -1;
-		_putchar('-');
-	}
-
-	temp = y;
-	while (temp >= 10)
-	{
-		x++;
-		temp /= 10;
-	}
-
-/* Exponent*/
-	for (i = 1; i < x; i++)
-		expo *= 10;
-/*Main */
-	while (expo > 1)
-	{
-		_putchar((y / expo) % 10 + '0');
-		expo /= 10;
-	}
-	_putchar(y % 10 + '0');
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strcat(s1, s2);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
 }
