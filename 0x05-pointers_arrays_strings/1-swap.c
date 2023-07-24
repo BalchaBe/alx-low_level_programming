@@ -5,11 +5,11 @@
  * pointer to first value
  * pointer to second value
  */
-void swap_int(int *y, int *z)
+void swap_int(int *a, int *b)
 {
 	int c;
 
-	c = *y;
-	*y = *z;
-	*z = c;
+	c = *a;
+	*a = *b;
+	*b = c;
 }
