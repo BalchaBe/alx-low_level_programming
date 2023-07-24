@@ -6,6 +6,7 @@
  * pointer to first value
  * pointer to second value
  */
+
 void swap_int(int *a, int *b)
 {
 	int c;
