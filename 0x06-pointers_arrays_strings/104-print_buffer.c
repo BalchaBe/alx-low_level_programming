@@ -3,27 +3,41 @@
 
 /**
  * print_buffer - prints a buffer
- * @b: buffer to print
- * @size: size of buffer
- *
- * Return: void
+ * @b: buffer.
+ * @size: size of buffer.
+ * Return: no return.
  */
 void print_buffer(char *b, int size)
 {
-int i;
-for (i = 0; i <= (size - 1) / 10 && size; i++)
-{
-printf("%08x: ", i * 10);
-if (i < size / 10)
-{
-print_line(b, 9, i);
-}
-else
-{
-print_line(b, size % 10 - 1, i);
-}
-putchar('\n');
-}
-if (size == 0)
-putchar('\n');
+	int m, n, k;
+
+	if (size <= 0)
+		printf("\n");
+	else
+	{
+		for (m = 0; m < size; m += 10)
+		{
+			printf("%.8x:", m);
+			for (n = m; n < m + 10; n++)
+			{
+				if (n % 2 == 0)
+					printf(" ");
+				if (n < size)
+					printf("%.2x", *(b + n));
+				else
+					printf("  ");
+			}
+			printf(" ");
+			for (k = m; k < m + 10; k++)
+			{
+				if (k >= size)
+					break;
+				if (*(b + k) < 32 || *(b + k) > 126)
+					printf("%c", '.');
+				else
+					printf("%c", *(b + k));
+			}
+			printf("\n");
+		}
+	}
 }
