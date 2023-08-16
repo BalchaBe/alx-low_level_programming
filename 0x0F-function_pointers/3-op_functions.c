@@ -7,9 +7,9 @@
  *
  * Return: add.
  */
-int op_add(int m, int n)
+int op_add(int a, int b)
 {
-	return (m + n);
+	return (a + b);
 }
 
 /**
@@ -19,9 +19,9 @@ int op_add(int m, int n)
  *
  * Return: difference.
  */
-int op_sub(int m, int n)
+int op_sub(int a, int b)
 {
-	return (m - n);
+	return (a - b);
 }
 
 /**
@@ -31,9 +31,9 @@ int op_sub(int m, int n)
  *
  * Return: multiplication.
  */
-int op_mul(int m, int n)
+int op_mul(int a, int b)
 {
-	return (m * n);
+	return (a * b);
 }
 
 /**
@@ -43,14 +43,14 @@ int op_mul(int m, int n)
  *
  * Return: division.
  */
-int op_div(int m, int n)
+int op_div(int a, int b)
 {
-	if (n == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (m / n);
+	return (a / b);
 }
 
 /**
@@ -60,12 +60,12 @@ int op_div(int m, int n)
  *
  * Return: remainder of the division.
  */
-int op_mod(int m, int n)
+int op_mod(int a, int b)
 {
-	if (n == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (m % n);
+	return (a % b);
 }

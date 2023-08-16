@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int m, n;
-	int (*p (int, int);
+	int a, b;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	p = get_op_func(argv[2]);
+	operation = get_op_func(argv[2]);
 
 	if (operation == NULL)
 	{
@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	m = atoi(argv[1]);
-	n = atoi(argv[3]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
-	printf("%d\n", p(m, n));
+	printf("%d\n", operation(a, b));
 	return (0);
 }
