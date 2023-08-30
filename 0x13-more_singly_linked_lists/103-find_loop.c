@@ -9,10 +9,10 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *p2;
-	listint_t *pr;
+	listint_t *prev;
 
 	p2 = head;
-	pr = head;
+	prev = head;
 	while (head && p2 && p2->next)
 	{
 		head = head->next;
@@ -20,12 +20,12 @@ listint_t *find_listint_loop(listint_t *head)
 
 		if (head == p2)
 		{
-			head = pr;
-			pr =  p2;
+			head = prev;
+			prev =  p2;
 			while (1)
 			{
-				p2 = pr;
-				while (p2->next != head && p2->next != pr)
+				p2 = prev;
+				while (p2->next != head && p2->next != prev)
 				{
 					p2 = p2->next;
 				}
